@@ -18,13 +18,24 @@
     <p> Type your zip code below or allow location and we'll be able to help.</p> 
     <div class="search">
       <input class="input"  id="input" placeholder="Enter Your ZipCode">
+      <button type="submit" class="pure-button pure-u-1 submit-btn">Search</button>
     </div>
-    
      <div class="map" id="map"></div>
     </section>
-    <script src="./assets/js/script.js"></script>
-    <script async
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCmSHDhoBOJ-KZKDSRgydYTUYj9rxwWgLg&libraries=places&callback=initGoogle"></script>
+    <section id="random-info">
+      <article>
+        <h2 class="resto-fav-data ">Hometown Food</h2>
+        <div class="header-container">
+          <h4 id="restaurantHeader">Restaurant Name</h4> <i id="resto-fav-btn" class="fas fa-heart resto-fav"></i>
+        </div>
+          <ul id="restaurantInfo">Restaurant Information</ul>
+      </article>
+      </section>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script async  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCmSHDhoBOJ-KZKDSRgydYTUYj9rxwWgLg&libraries=places&callback=initGoogle"></script>
+      <script src="./assets/js/script.js"></script>
+
 
   </body> 
+</html>
 

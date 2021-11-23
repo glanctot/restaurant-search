@@ -45,3 +45,28 @@ function initGoogle() {
 
 
 }
+
+var input = document.querySelector("#input");
+var submit =document.querySelector(".submit-btn");
+
+var fetch = function(){
+    const documentURL = {
+        async: true,
+        crossDomain : true,
+        url : "https://documenu.p.rapidapi.com/restaurants/zip_code/90210?size=30&cuisine=Italian&top_cuisines=true&page=2",
+        method: "GET",
+        headers: {
+            "x-api-key": "0593ad15e97663e5746f2064f3591196",
+            "x-rapidapi-host": "documenu.p.rapidapi.com",
+            "x-rapidapi-key": "baabfa2ab5msh21ce5891da5aaecp1faef3jsn54381f0e345b"
+        }
+    };
+    
+    $.ajax(documentURL).done(function (response) {
+        console.log(response.data);
+    });
+
+}
+submit.addEventListener('click',fetch)
+
+
