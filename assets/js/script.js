@@ -42,20 +42,31 @@ function callback (results, status) {
                 title: place.name
             });
 
-            var infowindow = new google.maps.infowindow({
+            var infowindow = new google.maps.InfoWindow({
                 content: content
-            })
+            });
 
-
+            bindInfoWindow(marker, map, infowindow, content);
+            marker.setMap(map);
         }
     }
+}
 
+function bindInfoWindow(marker, map, infoWindow, html) {
+    marker.addListener('click', function() {
+        infoWindow.setContent(html);
+        infoWindow.open(map, this);
+    });
+}
 
-
-
-
-
-
-
-
+function createPrice(level){
+    if (level != "" && level != null ){
+        let out = "";
+        for (var x = 0; x < level; x++){
+            out += "$";
+        }
+    return out; 
+    } else {
+    return "?";
+    }
 }
