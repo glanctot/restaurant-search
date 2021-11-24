@@ -5,16 +5,47 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>food finder</title>
+  <title>Hometown Food</title>
+  <script src="https://kit.fontawesome.com/39ab3fed40.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
-    <h1 class="page-title">Hometown Food</h1>
-    <h2 class="header">Hungry?....Type your zip code below or allow location and we'll be able to help.</h2>
-<input class="input"  id="input">
-    <div class="map" id="map"></div>
-    <script src="./assets/js/script.js"></script>
-    <script async
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCmSHDhoBOJ-KZKDSRgydYTUYj9rxwWgLg&libraries=places&callback=initGoogle"></script>
-</body>
+    <header>
+      <h1>Hometown Food</h1>
+    </header>
+
+    <section class="card"> 
+        <h2 class="header">Hungry?...</h2>
+        <p>Allow your location and we'll be able to help.</p> 
+        <div class="map" id="map"></div>
+    </section>
+
+    <section id="weather" class="card">
+        <form id="user-form">
+          <h2>Want to sit on the patio?  Check the weather!</h2>
+          <input name="city" id="city" type="text" autofocus="true" placeholder="Enter a City">
+          <button type="submit" class="button">
+            <i class="fas fa-arrow-alt-circle-right"></i>
+          </button>
+        </form>
+        <div id="weather-container" class="hidden">
+          <span id="city-search-term"></span>
+          <img id="icon">
+        </div>
+    </section>
+
+      <section>
+          <div id="how-it-works" class="card">
+            <h2>How It Works</h2>
+            <p>Allow your location and press locate to pull up restaurants within approximately 10 miles from your location.  Pick a restaurant from those provided to you.  Check the weather to see if you would like to sit outside.
+                We'll give you the name of the restaurant, an address, a price level on a scale of 1-3 $ and a rating on a scale of 1-5.
+            </p>
+          </div>
+      </section>
+      
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCmSHDhoBOJ-KZKDSRgydYTUYj9rxwWgLg&callback=initMap&libraries=places"></script>
+      <script src="./assets/js/script.js"></script>
+  </body> 
+</html>
