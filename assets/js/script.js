@@ -49,13 +49,23 @@ function callback (results, status) {
 
         }
     }
-
-
-
-
-
-
-
-
-
 }
+
+
+
+
+    function fetchWeather (){ 
+        var input= prompt("enter your city");
+            fetch('https://api.openweathermap.org/data/2.5/weather?q=' + input + ' &units=imperial&id=524901&appid=0fe3cfd026afb76b1605f15581136ad8')
+                .then(function(response) {
+                     return response.json();
+                 })
+                .then(function(data) {
+                     console.log(data);
+                    
+             
+                })
+            }
+
+            fetchWeather();
+               
