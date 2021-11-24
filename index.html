@@ -6,39 +6,52 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="icon" href="assets/imgs/burger.png">
-  <title>Food finder  </title>
+  <title>Hometown Food</title>
   <script src="https://kit.fontawesome.com/39ab3fed40.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
-  <section class="card"> 
-    <h1 class="heading">Hometown Food </h1>
-    <h2 class="header">Hungry?...</h2>
-    <p> Type your zip code below or allow location and we'll be able to help.</p> 
-    <div class="search">
-      <div>
-      <input class="input"  id="input" placeholder="Enter Your ZipCode">
-      <button   onclick="locateButtonPressed" type="submit" class="pure-button pure-u-1 submit-btn">locate</button>
-      </div>
-      <button type="submit" class="pure-button pure-u-1 submit-btn">Search</button>
-    </div>
-     <div class="map" id="map"></div>
+    <header>
+      <h1>Hometown Food</h1>
+    </header>
+
+    <section class="card"> 
+      <h2 class="header">Hungry?...</h2>
+      <p>Allow your location and we'll be able to help.</p> 
+      <div class="map" id="map"></div>
     </section>
     <section id="random-info">
       <article>
-        <h2 class="resto-fav-data ">Hometown Food</h2>
-        <div class="header-container">
-          <h4 id="restaurantHeader">Restaurant Name</h4> <i id="resto-fav-btn" class="fas fa-heart resto-fav"></i>
-        </div>
-          <ul id="restaurantInfo">Restaurant Information</ul>
+        <h2 class="resto-fav-data">Restaurant Food</h2>
+        <i id="resto-fav-btn" class="fas fa-heart resto-fav"></i>
+          <ul id="restaurantInfo"></ul>
       </article>
+    </section>
+
+    <section id="weather" class="card">
+      <form id="user-form">
+        <h2>Search Your City:</h2>
+        <input name="city" id="city" type="text" autofocus="true" placeholder="Enter a City">
+        <button type="submit">Search</button>
+      </form>
+      <div id="weather-container">
+        <span id="city-search-term"></span>
+      </div>
+    </section>
+
+      <section>
+        <div id="how-it-works" class="card">
+          <h2>How It Works</h2>
+          <p>Allow your location and press locate to pull up restaurants within approximately 10 miles from your location.  Pick a restaurant from those provided to you.  Check the weather to see if you would like to sit outside.
+              We'll give you the name of the restaurant, an address, a price level on a scale of 1-5 and a rating on a scale of 1-5.
+          </p>
+        </div>
       </section>
+      
       <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCmSHDhoBOJ-KZKDSRgydYTUYj9rxwWgLg&callback=initMap&libraries=places"></script>
+      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCmSHDhoBOJ-KZKDSRgydYTUYj9rxwWgLg&callback=initMap&libraries=places"></script>
       <script src="./assets/js/script.js"></script>
-
-
   </body> 
 </html>
 
