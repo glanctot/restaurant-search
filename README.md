@@ -24,4 +24,4 @@ This project allows the user to enable location services and find restaurants in
    So that I can decide what to eat and have the choice of sitting outside.
 
 ## ScreenShot
-
+![image](https://user-images.githubusercontent.com/91084910/143797726-aff6cef7-6c95-414e-98b6-78c16334b440.png)
