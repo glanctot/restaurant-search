@@ -1,4 +1,4 @@
-# Restaurant-search
+# HomeTown Food
       
  ## Coding Bootcamp Project #1
   ### Description 
@@ -25,3 +25,5 @@ This project allows the user to enable location services and find restaurants in
 
 ## ScreenShot
 ![image](https://user-images.githubusercontent.com/91084910/143797726-aff6cef7-6c95-414e-98b6-78c16334b440.png)
+
+
